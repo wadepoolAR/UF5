@@ -1,0 +1,233 @@
+.inscription-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.inscription-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/section-bg-imgae-1.svg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.inscription-container {
+    position: relative;
+    z-index: 2;
+}
+
+.map-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 700px;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 700px;
+    overflow-y: auto;
+}
+
+#map {
+    height: 100%;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-title {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: #fff;
+    padding: 15px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ff6b35;
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-inscription {
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-inscription:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+    color: #fff;
+}
+
+.selected-info {
+    background: rgba(255, 107, 53, 0.1);
+    border: 2px solid rgba(255, 107, 53, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.selected-info h6 {
+    color: #ff6b35;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.venue-option {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+.venue-option:hover {
+    background: rgba(255, 107, 53, 0.1);
+    border-color: rgba(255, 107, 53, 0.5);
+    transform: translateX(5px);
+}
+
+.venue-option.selected {
+    background: rgba(255, 107, 53, 0.2);
+    border-color: #ff6b35;
+}
+
+.venue-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.venue-address {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-title p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.leaflet-popup-content-wrapper {
+    background: rgba(26, 26, 26, 0.95);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.leaflet-popup-content {
+    color: #fff;
+}
+
+.leaflet-popup-tip {
+    background: rgba(26, 26, 26, 0.95);
+}
+
+.city-popup h6 {
+    color: #ff6b35;
+    margin-bottom: 10px;
+}
+
+.city-popup .btn {
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+#selectedInfo,
+#venuesList {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .map-container,
+    .form-container {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .form-title {
+        font-size: 2rem;
+    }
+
+    .section-title h2 {
+        font-size: 2.5rem;
+    }
+}
